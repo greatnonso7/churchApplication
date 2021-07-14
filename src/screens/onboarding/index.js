@@ -1,7 +1,10 @@
 import React from 'react';
-import {View, Text, SafeAreaView, ImageBackground} from 'react-native';
+import {View, Text, SafeAreaView, ImageBackground, Image} from 'react-native';
 
 import {styles} from './style';
+
+import TextInput from '../../shared/text-input';
+import LongButton from '../../shared/long-button';
 
 class Onboarding extends React.Component {
   constructor(props) {
@@ -11,17 +14,31 @@ class Onboarding extends React.Component {
 
   render() {
     return (
-      <View>
-        <ImageBackground
-          source={require('../../assets/images/image-bg.jpg')}
-          style={styles.imageBg}>
-          <View style={styles.overlay} />
+      <ImageBackground
+        source={require('../../assets/images/image-bg.jpg')}
+        style={styles.imageBg}>
+        <View style={styles.overlay} />
 
-          <View style={styles.body}>
-            <Text>Hello world</Text>
+        <View style={styles.body}>
+          <Image
+            source={require('../../assets/images/logo.png')}
+            resizeMode="contain"
+            style={styles.logo}
+          />
+          <View style={styles.formContainer}>
+            <TextInput placeholder="Full Name" />
+            <TextInput placeholder="Phone Number" />
+
+            <View style={styles.buttonContainer}>
+              <LongButton
+                buttonStyle={[styles.button]}
+                isNotBottom
+                title="Login Account"
+              />
+            </View>
           </View>
-        </ImageBackground>
-      </View>
+        </View>
+      </ImageBackground>
     );
   }
 }

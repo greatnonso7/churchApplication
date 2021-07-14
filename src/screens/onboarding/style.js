@@ -1,8 +1,7 @@
-import {StyleSheet, Platform} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {
   wp,
   hp,
-  getStatusBarHeight,
   deviceHeight,
   deviceWidth,
 } from '../../shared/responsive-dimension';
@@ -13,10 +12,6 @@ const {main} = globalStyle(colors);
 
 export const styles = StyleSheet.create({
   container: {
-    // alignItems: 'center',
-    paddingHorizontal: wp(20),
-    paddingTop: Platform.OS === 'ios' ? getStatusBarHeight(true) : 0,
-    backgroundColor: colors.white,
     flex: 1,
   },
   verticalClaneLogo: {
@@ -35,21 +30,21 @@ export const styles = StyleSheet.create({
 
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: colors.purple,
-    opacity: 0.4,
+    backgroundColor: colors.blue,
+    opacity: 0.2,
+  },
+  logo: {
+    height: hp(200),
+    width: wp(200),
   },
 
   body: {
-    marginTop: hp(196),
-    width: '100%',
-    marginBottom: hp(220),
-    alignSelf: 'flex-start',
+    marginTop: hp(80),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  underline: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    borderBottomWidth: 0.5,
-    borderBottomColor: colors.dark,
+  formContainer: {
+    marginTop: hp(20),
   },
   loginButtonText: {
     ...main.normalText16,
@@ -63,18 +58,8 @@ export const styles = StyleSheet.create({
     flexWrap: 'wrap',
     ...main.normalText12,
   },
-  loginButton: {
-    backgroundColor: colors.white,
-    borderRadius: hp(8),
-    borderWidth: 1,
-    borderColor: '#303041',
-    width: wp(335),
-    height: hp(56),
-    marginTop: hp(10),
-  },
-  button: {
-    backgroundColor: colors.dark,
-    width: wp(335),
-    height: hp(56),
+
+  buttonContainer: {
+    marginTop: hp(200),
   },
 });
