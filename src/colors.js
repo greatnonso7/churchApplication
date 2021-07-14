@@ -22,6 +22,7 @@ const sharedColors = {
   snowMountain: '#D2DAF5',
   transparent: 'transparent',
   purple: '#8B03CA',
+  gold: '#FAD352',
 };
 
 /**

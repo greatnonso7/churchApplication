@@ -14,15 +14,6 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  verticalClaneLogo: {
-    position: 'absolute',
-    zIndex: -1,
-    right: -hp(64),
-    top: hp(100),
-  },
-  welcomeText: {
-    ...main.boldText36,
-  },
   imageBg: {
     height: deviceHeight,
     width: deviceWidth,
@@ -58,8 +49,11 @@ export const styles = StyleSheet.create({
     flexWrap: 'wrap',
     ...main.normalText12,
   },
+  button: {
+    backgroundColor: colors.gold,
+  },
 
   buttonContainer: {
-    marginTop: hp(200),
+    marginTop: hp(240),
   },
 });
