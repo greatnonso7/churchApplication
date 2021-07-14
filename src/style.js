@@ -1,5 +1,4 @@
-import {wp, hp} from './shared/resposive-dimension';
-import {Platform} from 'react-native';
+import {wp, hp} from './shared/responsive-dimension';
 import {isIOS} from './utils';
 
 const font = {

@@ -1,13 +1,15 @@
 import {StyleSheet, Platform} from 'react-native';
-import {wp, hp, getStatusBarHeight} from '../../shared/responsive-dimension';
-import {globalStyle} from '../style';
-import {consumerNormalColors as colors} from '../colors';
+import {
+  wp,
+  hp,
+  getStatusBarHeight,
+  deviceHeight,
+  deviceWidth,
+} from '../../shared/responsive-dimension';
+import {globalStyle} from '../../style';
+import {consumerNormalColors as colors} from '../../colors';
 
 const {main} = globalStyle(colors);
-
-const appFont = {
-  fontFamily: 'Inter-Regular',
-};
 
 export const styles = StyleSheet.create({
   container: {
@@ -26,8 +28,18 @@ export const styles = StyleSheet.create({
   welcomeText: {
     ...main.boldText36,
   },
+  imageBg: {
+    height: deviceHeight,
+    width: deviceWidth,
+  },
 
-  welcomeView: {
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: colors.purple,
+    opacity: 0.4,
+  },
+
+  body: {
     marginTop: hp(196),
     width: '100%',
     marginBottom: hp(220),
@@ -44,7 +56,7 @@ export const styles = StyleSheet.create({
   },
   buttonText: {
     ...main.normalText16,
-    color: colors.white,
+    color: colors.primary,
   },
   termsText: {
     flexDirection: 'row',
