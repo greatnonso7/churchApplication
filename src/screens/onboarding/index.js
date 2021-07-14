@@ -1,47 +1,113 @@
-import React from 'react';
-import {View, Text, SafeAreaView, ImageBackground, Image} from 'react-native';
-
+/* eslint-disable react-native/no-inline-styles */
+import React, {useState} from 'react';
+import {
+  View,
+  ScrollView,
+  Text,
+  SafeAreaView,
+  Image,
+  ImageBackground,
+} from 'react-native';
 import {styles} from './style';
+import {normalColors as colors} from '../../colors';
+import {sharedImages} from '../../images';
+import {deviceWidth} from '../../shared/responsive-dimension';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
-import TextInput from '../../shared/text-input';
-import LongButton from '../../shared/long-button';
+const Onboarding = () => {
+  const [sliderState, setSliderState] = useState({currentPage: 0});
 
-class Onboarding extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+  const setSliderPage = event => {
+    const {currentPage} = sliderState;
+    const {x} = event.nativeEvent.contentOffset;
+    const indexOfNextScreen = Math.floor(x / deviceWidth);
+    if (indexOfNextScreen !== currentPage) {
+      setSliderState({
+        ...sliderState,
+        currentPage: indexOfNextScreen,
+      });
+    }
+  };
 
-  render() {
-    return (
-      <ImageBackground
-        source={require('../../assets/images/image-bg.jpg')}
-        style={styles.imageBg}>
-        <View style={styles.overlay} />
+  const {currentPage: pageIndex} = sliderState;
 
-        <View style={styles.body}>
-          <Image
-            source={require('../../assets/images/logo.png')}
-            resizeMode="contain"
-            style={styles.logo}
-          />
-          <View style={styles.formContainer}>
-            <TextInput placeholder="Full Name" />
-            <TextInput placeholder="Phone Number" />
+  return (
+    <View style={styles.container}>
+      <ScrollView
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        scrollEventThrottle={16}
+        pagingEnabled={true}
+        onScroll={event => {
+          setSliderPage(event);
+        }}>
+        <View style={styles.contentContainer}>
+          <ImageBackground
+            source={sharedImages.praise1}
+            resizeMode="cover"
+            style={styles.imageStyle}>
+            <View style={styles.overlay} />
 
-            <View style={styles.buttonContainer}>
-              <LongButton
-                buttonStyle={[styles.button]}
-                isNotBottom
-                title="Login Account"
-              />
-              <Text>Already have an account</Text>
+            <View style={styles.textContainer}>
+              <Text style={styles.text}>
+                Say goodbye 👋{'\n'} to paper receipts
+              </Text>
             </View>
-          </View>
+          </ImageBackground>
         </View>
-      </ImageBackground>
-    );
-  }
-}
+        <View style={styles.contentContainer}>
+          <ImageBackground
+            source={sharedImages.praise2}
+            resizeMode="cover"
+            style={styles.imageStyle}>
+            <View style={styles.overlay} />
+
+            <View style={styles.textContainer}>
+              <Text style={styles.text}>Monitor your{'\n'}daily spending</Text>
+            </View>
+          </ImageBackground>
+        </View>
+        <View style={styles.contentContainer}>
+          <ImageBackground
+            source={sharedImages.praise3}
+            resizeMode="cover"
+            style={styles.imageStyle}>
+            <View style={styles.overlay} />
+            <View style={styles.textContainer}>
+              <Text style={styles.text}>
+                Little faith, little growth;{'\n'} great faith, great growth
+              </Text>
+            </View>
+          </ImageBackground>
+        </View>
+      </ScrollView>
+      <View style={styles.paginationWrapper}>
+        {Array.from(Array(3).keys()).map((key, index) => (
+          <View
+            style={[
+              styles.paginationDots,
+              {opacity: pageIndex === index ? 1 : 0.2},
+            ]}
+            key={index}
+          />
+        ))}
+      </View>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity
+          activeOpacity={0.7}
+          onPress={() => true}
+          style={styles.registerButton}>
+          <Text style={styles.loginText}>Get Started</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.loginButton}
+          activeOpacity={0.7}
+          onPress={() => true}>
+          <Text style={styles.registerText}>Login</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+};
 
 export default Onboarding;
