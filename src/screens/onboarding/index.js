@@ -35,6 +35,7 @@ class Onboarding extends React.Component {
                 isNotBottom
                 title="Login Account"
               />
+              <Text>Already have an account</Text>
             </View>
           </View>
         </View>
