@@ -42,13 +42,14 @@ export const styles = StyleSheet.create({
   },
   textContainer: {
     position: 'absolute',
-    bottom: hp(240),
-    right: hp(10),
+    bottom: hp(280),
+    right: hp(30),
   },
   text: {
-    ...main.semiBoldText36,
+    ...main.boldText48,
     color: colors.white,
     fontWeight: '500',
+    padding: hp(20),
     textAlign: 'center',
   },
   buttonContainer: {

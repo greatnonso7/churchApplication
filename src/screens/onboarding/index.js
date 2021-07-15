@@ -1,15 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {
-  View,
-  ScrollView,
-  Text,
-  SafeAreaView,
-  Image,
-  ImageBackground,
-} from 'react-native';
+import {View, ScrollView, Text, ImageBackground} from 'react-native';
 import {styles} from './style';
-import {normalColors as colors} from '../../colors';
 import {sharedImages} from '../../images';
 import {deviceWidth} from '../../shared/responsive-dimension';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -50,7 +42,7 @@ const Onboarding = () => {
 
             <View style={styles.textContainer}>
               <Text style={styles.text}>
-                Say goodbye 👋{'\n'} to paper receipts
+                But{'\n'}First{'\n'}Pray
               </Text>
             </View>
           </ImageBackground>
@@ -63,7 +55,9 @@ const Onboarding = () => {
             <View style={styles.overlay} />
 
             <View style={styles.textContainer}>
-              <Text style={styles.text}>Monitor your{'\n'}daily spending</Text>
+              <Text style={styles.text}>
+                Dream{'\n'}Shine{'\n'}Sparkle
+              </Text>
             </View>
           </ImageBackground>
         </View>
@@ -75,7 +69,7 @@ const Onboarding = () => {
             <View style={styles.overlay} />
             <View style={styles.textContainer}>
               <Text style={styles.text}>
-                Little faith, little growth;{'\n'} great faith, great growth
+                Faith{'\n'}Over{'\n'}Fear
               </Text>
             </View>
           </ImageBackground>
@@ -86,7 +80,7 @@ const Onboarding = () => {
           <View
             style={[
               styles.paginationDots,
-              {opacity: pageIndex === index ? 1 : 0.2},
+              {opacity: pageIndex === index ? 1 : 0.6},
             ]}
             key={index}
           />

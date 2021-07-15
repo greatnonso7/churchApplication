@@ -195,6 +195,13 @@ export const globalStyle = colors => ({
       color: colors.dark,
     },
 
+    boldText48: {
+      fontSize: hp(48),
+      lineHeight: hp(54),
+      ...bold,
+      color: colors.dark,
+    },
+
     //blue
     semiBoldText10: {
       fontSize: hp(10),
