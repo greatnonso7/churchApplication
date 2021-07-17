@@ -21,12 +21,13 @@ export const styles = StyleSheet.create({
     width: deviceWidth,
   },
   itemText: {
-    ...main.boldText24,
+    ...main.normalText14,
     color: colors.white,
     position: 'absolute',
     justifyContent: 'center',
     alignSelf: 'center',
-    top: hp(100),
+    bottom: hp(0),
+    left: hp(10),
   },
 
   overlay: {
@@ -39,6 +40,10 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     margin: hp(10),
+    height: hp(180),
+    backgroundColor: colors.dark,
+    width: wp(100),
+    borderRadius: hp(15),
   },
   logo: {
     height: hp(80),
@@ -49,9 +54,11 @@ export const styles = StyleSheet.create({
     width: wp(30),
   },
   imageItem: {
-    height: hp(140),
-    width: wp(160),
-    borderRadius: hp(10),
+    height: hp(120),
+    width: wp(90),
+    position: 'absolute',
+    bottom: hp(50),
+    borderRadius: hp(3),
   },
   logoContainer: {
     justifyContent: 'center',

@@ -16,7 +16,7 @@ class Media extends React.Component {
           hasBackButton
           headerTitle="Media"
           tintColor="#000"
-          onPressRightIcon={() => goBack()}
+          onPressLeftIcon={() => goBack()}
         />
       </View>
     );
