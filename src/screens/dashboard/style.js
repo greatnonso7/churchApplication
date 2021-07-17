@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
   overlay: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: colors.dark,
-    opacity: 0.5,
+    opacity: 0.7,
     borderRadius: hp(20),
   },
   itemContainer: {
@@ -40,8 +40,8 @@ export const styles = StyleSheet.create({
     margin: hp(10),
   },
   logo: {
-    height: hp(100),
-    width: wp(150),
+    height: hp(80),
+    width: wp(120),
   },
   iconBack: {
     height: hp(30),
@@ -62,7 +62,7 @@ export const styles = StyleSheet.create({
     left: hp(20),
   },
   body: {
-    marginTop: hp(20),
+    marginTop: hp(10),
     marginHorizontal: hp(7),
   },
   formContainer: {

@@ -19,6 +19,7 @@ export const sharedImages = {
   prayer: require('./assets/images/prayer.jpg'),
   books: require('./assets/images/books.jpg'),
   contact: require('./assets/images/contact.jpg'),
+  attend: require('./assets/images/attend.jpg'),
   /**
    * Icons
    */
