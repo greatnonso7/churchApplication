@@ -1,10 +1,17 @@
 import React from 'react';
-import {View, Text, ImageBackground, Image} from 'react-native';
+import {
+  View,
+  Text,
+  ImageBackground,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 
 import {styles} from './style';
 
 import TextInput from '../../../shared/text-input';
 import LongButton from '../../../shared/long-button';
+import {sharedImages} from '../../../images';
 
 class Register extends React.Component {
   constructor(props) {
@@ -13,11 +20,21 @@ class Register extends React.Component {
   }
 
   render() {
+    const {goBack} = this.props.navigation;
     return (
       <ImageBackground
         source={require('../../../assets/images/image-bg.jpg')}
         style={styles.imageBg}>
         <View style={styles.overlay} />
+        <TouchableOpacity
+          onPress={() => goBack()}
+          style={styles.backButtonContainer}>
+          <Image
+            source={sharedImages.back}
+            resizeMode="contain"
+            style={styles.iconBack}
+          />
+        </TouchableOpacity>
 
         <View style={styles.body}>
           <Image
@@ -27,15 +44,16 @@ class Register extends React.Component {
           />
           <View style={styles.formContainer}>
             <TextInput placeholder="Full Name" />
+            <TextInput placeholder="Email Address" />
             <TextInput placeholder="Phone Number" />
 
             <View style={styles.buttonContainer}>
               <LongButton
                 buttonStyle={[styles.button]}
                 isNotBottom
-                title="Login Account"
+                title="Create Account"
               />
-              <Text>Already have an account</Text>
+              {/* <Text>Already have an account</Text> */}
             </View>
           </View>
         </View>

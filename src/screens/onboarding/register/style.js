@@ -19,6 +19,15 @@ export const styles = StyleSheet.create({
     width: deviceWidth,
   },
 
+  backButtonContainer: {
+    position: 'relative',
+    top: hp(50),
+    left: hp(20),
+  },
+  iconBack: {
+    height: hp(30),
+    width: wp(30),
+  },
   overlay: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: colors.blue,
@@ -30,7 +39,7 @@ export const styles = StyleSheet.create({
   },
 
   body: {
-    marginTop: hp(80),
+    marginTop: hp(30),
     justifyContent: 'center',
     alignItems: 'center',
   },
