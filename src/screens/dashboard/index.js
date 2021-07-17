@@ -20,6 +20,7 @@ class Dashboard extends React.Component {
   }
 
   render() {
+    const {navigate, goBack} = this.props.navigation;
     return (
       <ScrollView
         showsHorizontalScrollIndicator={false}
@@ -39,6 +40,7 @@ class Dashboard extends React.Component {
             renderItem={({item}) => (
               <TouchableOpacity
                 activeOpacity={0.8}
+                onPress={() => navigate(item.url)}
                 style={styles.itemContainer}>
                 <Image
                   source={item.image}

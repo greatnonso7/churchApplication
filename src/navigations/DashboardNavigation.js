@@ -6,6 +6,8 @@ import {
 } from '@react-navigation/stack';
 
 import Dashboard from '../screens/dashboard';
+import Media from '../screens/dashboard/media';
+import Books from '../screens/dashboard/books';
 
 export const DashboardRoutes = {
   initialRoute: 'Dashboard',
@@ -19,5 +21,7 @@ export const DashboardRoutes = {
       name: 'Dashboard',
       component: Dashboard,
     },
+    {name: 'Media', component: Media},
+    {name: 'Books', component: Books},
   ],
 };
