@@ -3,7 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {HomeRoutes} from './HomeNavigation';
 import {connect} from 'react-redux';
-// import {DashboardRoutes} from './DashboardNavigation';
+import {DashboardRoutes} from './DashboardNavigation';
 import {ENV} from '../utils';
 
 const Stack = createStackNavigator();
@@ -13,7 +13,8 @@ const AppNav = props => {
 
   const myRef = React.createRef();
 
-  let ActiveRoute = HomeRoutes;
+  // let ActiveRoute = HomeRoutes;
+  let ActiveRoute = DashboardRoutes;
 
   // const ActiveRoute = loggedIn ? DashboardRoutes : HomeRoutes;
 
