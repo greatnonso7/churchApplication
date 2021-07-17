@@ -15,13 +15,13 @@ class Login extends React.Component {
   render() {
     return (
       <ImageBackground
-        source={require('../../assets/images/image-bg.jpg')}
+        source={require('../../../assets/images/image-bg.jpg')}
         style={styles.imageBg}>
         <View style={styles.overlay} />
 
         <View style={styles.body}>
           <Image
-            source={require('../../assets/images/logo.png')}
+            source={require('../../../assets/images/logo.png')}
             resizeMode="contain"
             style={styles.logo}
           />

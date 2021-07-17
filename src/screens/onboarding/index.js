@@ -6,7 +6,7 @@ import {sharedImages} from '../../images';
 import {deviceWidth} from '../../shared/responsive-dimension';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
-const Onboarding = () => {
+const Onboarding = props => {
   const [sliderState, setSliderState] = useState({currentPage: 0});
 
   const setSliderPage = event => {
@@ -96,7 +96,7 @@ const Onboarding = () => {
         <TouchableOpacity
           style={styles.loginButton}
           activeOpacity={0.7}
-          onPress={() => true}>
+          onPress={() => props.navigation.navigate('Login')}>
           <Text style={styles.registerText}>Login</Text>
         </TouchableOpacity>
       </View>

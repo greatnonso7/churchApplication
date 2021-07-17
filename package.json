@@ -12,6 +12,9 @@
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/native": "^5.9.4",
+    "@react-navigation/stack": "^5.14.5",
+    "@rematch/core": "^2.0.1",
+    "@rematch/persist": "^2.0.1",
     "react": "17.0.1",
     "react-native": "0.64.2",
     "react-native-elements": "^3.4.2",
@@ -19,7 +22,11 @@
     "react-native-reanimated": "^2.2.0",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.4.0",
-    "react-native-vector-icons": "^8.1.0"
+    "react-native-vector-icons": "^8.1.0",
+    "react-redux": "^7.2.4",
+    "redux-logger": "^3.0.6",
+    "redux-persist-transform-filter": "^0.0.20",
+    "rxjs": "^7.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
