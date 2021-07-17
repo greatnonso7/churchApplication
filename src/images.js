@@ -13,6 +13,7 @@ export const sharedImages = {
   /**
    * Icons
    */
+  back: require('./assets/images/icons/back.png'),
 
   /**
    * Logo

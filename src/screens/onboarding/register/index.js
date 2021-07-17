@@ -1,40 +1,23 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  ImageBackground,
-  Image,
-} from 'react-native';
+import {View, Text, ImageBackground, Image} from 'react-native';
 
 import {styles} from './style';
 
 import TextInput from '../../../shared/text-input';
 import LongButton from '../../../shared/long-button';
-import {sharedImages} from '../../../images';
 
-class Login extends React.Component {
+class Register extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
   render() {
-    const {goBack} = this.props.navigation;
     return (
       <ImageBackground
         source={require('../../../assets/images/image-bg.jpg')}
         style={styles.imageBg}>
         <View style={styles.overlay} />
-        <TouchableOpacity
-          onPress={() => goBack()}
-          style={styles.backButtonContainer}>
-          <Image
-            source={sharedImages.back}
-            resizeMode="contain"
-            style={styles.iconBack}
-          />
-        </TouchableOpacity>
 
         <View style={styles.body}>
           <Image
@@ -61,4 +44,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default Register;

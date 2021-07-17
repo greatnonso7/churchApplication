@@ -89,7 +89,7 @@ const Onboarding = props => {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           activeOpacity={0.7}
-          onPress={() => true}
+          onPress={() => props.navigation.navigate('Register')}
           style={styles.registerButton}>
           <Text style={styles.loginText}>Get Started</Text>
         </TouchableOpacity>

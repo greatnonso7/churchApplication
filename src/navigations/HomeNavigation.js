@@ -1,6 +1,6 @@
 import Welcome from '../screens/onboarding';
 import Login from '../screens/onboarding/login';
-// import Register from '../screens/onboarding/register';
+import Register from '../screens/onboarding/register';
 
 export const HomeRoutes = {
   initialRoute: 'Home',
@@ -18,9 +18,9 @@ export const HomeRoutes = {
       name: 'Login',
       component: Login,
     },
-    // {
-    //   name: 'Register',
-    //   component: Register,
-    // },
+    {
+      name: 'Register',
+      component: Register,
+    },
   ],
 };

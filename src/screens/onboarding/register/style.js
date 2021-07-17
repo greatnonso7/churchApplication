@@ -28,15 +28,7 @@ export const styles = StyleSheet.create({
     height: hp(200),
     width: wp(200),
   },
-  iconBack: {
-    height: hp(30),
-    width: wp(30),
-  },
-  backButtonContainer: {
-    position: 'absolute',
-    top: hp(40),
-    left: hp(20),
-  },
+
   body: {
     marginTop: hp(80),
     justifyContent: 'center',
