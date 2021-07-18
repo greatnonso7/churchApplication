@@ -48,6 +48,12 @@ export const sharedImages = {
   book18: require('./assets/images/books/share-jesus.jpeg'),
 
   /**
+   * Banks
+   */
+  gtb: require('./assets/images/banks/gtb.png'),
+  uba: require('./assets/images/banks/uba.png'),
+  zenith: require('./assets/images/banks/Zenith.png'),
+  /**
    * Logo
    */
   logo: require('./assets/images/logo.png'),
