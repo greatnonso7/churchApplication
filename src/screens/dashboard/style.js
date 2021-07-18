@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     backgroundColor: colors.dark,
     opacity: 0.7,
-    borderRadius: hp(20),
+    borderRadius: hp(10),
   },
   itemContainer: {
     justifyContent: 'center',

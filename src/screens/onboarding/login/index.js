@@ -48,11 +48,11 @@ class Login extends React.Component {
 
             <View style={styles.buttonContainer}>
               <LongButton
+                onPress={() => this.props.navigation.navigate('Dashboard')}
                 buttonStyle={[styles.button]}
                 isNotBottom
                 title="Login Account"
               />
-              <Text>Already have an account</Text>
             </View>
           </View>
         </View>
