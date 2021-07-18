@@ -1,9 +1,10 @@
 import React from 'react';
-import {View, Text, FlatList, Image} from 'react-native';
+import {View, Text, FlatList, Image, ScrollView} from 'react-native';
 
 import {styles} from './style';
 import HeaderBar from '../../../shared/header-bar';
 import {sharedImages} from '../../../images';
+import {hp, wp} from '../../../shared/responsive-dimension';
 
 class Prayer extends React.Component {
   constructor(props) {
@@ -26,6 +27,8 @@ class Prayer extends React.Component {
             View our latest prayer below as well as the most popular prayers.
           </Text>
           <FlatList
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={{paddingBottom: hp(130)}}
             data={data}
             renderItem={({item}) => (
               <View style={styles.itemContainer}>
@@ -34,8 +37,8 @@ class Prayer extends React.Component {
                   resizeMode="cover"
                   style={styles.imageItem}
                 />
-                <View>
-                  <Text style={styles.itemText}>{item.title}</Text>
+                <View style={styles.textContainer}>
+                  <Text style={styles.itemHeader}>{item.title}</Text>
                   <Text>{item.content}</Text>
                 </View>
               </View>
@@ -53,7 +56,35 @@ const data = [
     image: sharedImages.morningPrayer,
     title: 'A Morning Prayer for God"s Presence',
     content:
-      'Lord, may nothing separate me from You today. Teach me how to choose only Your way today so each step will lead me closer to You. Help me walk by the Word and not my feelings. Help me to keep my heart pure and undivided. Protect me from my own careless thoughts, words, and actions. And keep me from being distracted by MY wants, MY desires, MY thoughts on how things should be. Help me to embrace what comes my way as an opportunity... rather than a personal inconvenience. And finally, help me to rest in the truth of Psalm 86:13,  Amen.',
+      'Lord, may nothing separate me from You today. Teach me how to choose only Your way today so each step will lead me closer to You. Help me walk by the Word and not my feelings. Help me to keep my heart pure and undivided. Protect me from my own careless thoughts, words, and actions.',
+  },
+  {
+    id: '1',
+    image: sharedImages.morningPrayer,
+    title: 'A Morning Prayer for God"s Presence',
+    content:
+      'Lord, may nothing separate me from You today. Teach me how to choose only Your way today so each step will lead me closer to You. Help me walk by the Word and not my feelings. Help me to keep my heart pure and undivided. Protect me from my own careless thoughts, words, and actions.',
+  },
+  {
+    id: '1',
+    image: sharedImages.morningPrayer,
+    title: 'A Morning Prayer for God"s Presence',
+    content:
+      'Lord, may nothing separate me from You today. Teach me how to choose only Your way today so each step will lead me closer to You. Help me walk by the Word and not my feelings. Help me to keep my heart pure and undivided. Protect me from my own careless thoughts, words, and actions.',
+  },
+  {
+    id: '1',
+    image: sharedImages.morningPrayer,
+    title: 'A Morning Prayer for God"s Presence',
+    content:
+      'Lord, may nothing separate me from You today. Teach me how to choose only Your way today so each step will lead me closer to You. Help me walk by the Word and not my feelings. Help me to keep my heart pure and undivided. Protect me from my own careless thoughts, words, and actions.',
+  },
+  {
+    id: '1',
+    image: sharedImages.morningPrayer,
+    title: 'A Morning Prayer for God"s Presence',
+    content:
+      'Lord, may nothing separate me from You today. Teach me how to choose only Your way today so each step will lead me closer to You. Help me walk by the Word and not my feelings. Help me to keep my heart pure and undivided. Protect me from my own careless thoughts, words, and actions.',
   },
 ];
 

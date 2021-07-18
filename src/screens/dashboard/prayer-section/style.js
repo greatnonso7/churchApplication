@@ -23,8 +23,12 @@ export const styles = StyleSheet.create({
   itemText: {
     ...main.normalText14,
     color: colors.white,
-    justifyContent: 'center',
-    alignSelf: 'center',
+  },
+  itemHeader: {
+    ...main.semiBoldText14,
+  },
+  textContainer: {
+    maxWidth: hp(240),
   },
   accountName: {
     ...main.normalText16,
@@ -46,15 +50,16 @@ export const styles = StyleSheet.create({
   },
   itemContainer: {
     margin: hp(10),
-    height: hp(120),
+    height: hp(200),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: wp(330),
+    width: wp(350),
+    borderWidth: hp(2),
     borderRadius: hp(15),
   },
   logo: {
-    height: hp(80),
+    height: hp(120),
     width: wp(120),
   },
   iconBack: {
@@ -62,8 +67,10 @@ export const styles = StyleSheet.create({
     width: wp(30),
   },
   imageItem: {
-    height: hp(80),
-    width: wp(80),
+    height: hp(90),
+    width: wp(90),
+    marginLeft: hp(5),
+    borderRadius: hp(5),
   },
   logoContainer: {
     justifyContent: 'center',
@@ -76,7 +83,7 @@ export const styles = StyleSheet.create({
   },
   body: {
     marginTop: hp(10),
-    marginHorizontal: hp(10),
+    marginHorizontal: hp(5),
   },
   formContainer: {
     marginTop: hp(20),
@@ -92,6 +99,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     ...main.normalText16,
+    maxWidth: hp(330),
+    paddingLeft: hp(10),
   },
   button: {
     backgroundColor: colors.gold,
