@@ -9,6 +9,7 @@ import Dashboard from '../screens/dashboard';
 import Media from '../screens/dashboard/media';
 import Books from '../screens/dashboard/books';
 import Giving from '../screens/dashboard/giving';
+import Prayer from '../screens/dashboard/prayer-section';
 
 export const DashboardRoutes = {
   initialRoute: 'Dashboard',
@@ -25,5 +26,6 @@ export const DashboardRoutes = {
     {name: 'Media', component: Media},
     {name: 'Books', component: Books},
     {name: 'Giving', component: Giving},
+    {name: 'Prayer', component: Prayer},
   ],
 };

@@ -65,7 +65,7 @@ const data = [
   {id: '3', image: sharedImages.giving, title: 'Giving', url: 'Giving'},
   {id: '4', image: sharedImages.live, title: 'Live Stream', url: 'LiveStream'},
   {id: '5', image: sharedImages.books, title: 'Books', url: 'Books'},
-  {id: '6', image: sharedImages.prayer, title: 'Payers', url: 'Payers'},
+  {id: '6', image: sharedImages.prayer, title: 'Prayers', url: 'Prayer'},
   {id: '7', image: sharedImages.contact, title: 'Contact', url: 'Contact'},
   {id: '8', image: sharedImages.attend, title: 'Attend', url: 'Attend'},
 ];

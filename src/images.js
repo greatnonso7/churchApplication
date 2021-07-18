@@ -57,4 +57,9 @@ export const sharedImages = {
    * Logo
    */
   logo: require('./assets/images/logo.png'),
+
+  /**
+   * Prayers
+   */
+  morningPrayer: require('./assets/images/prayers/morning-prayer.jpg'),
 };
