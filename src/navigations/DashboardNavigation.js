@@ -7,6 +7,7 @@ import Prayer from '../screens/dashboard/prayer-section';
 import Media from '../screens/dashboard/media';
 import Books from '../screens/dashboard/books';
 import Giving from '../screens/dashboard/giving';
+import LiveStream from '../screens/dashboard/live-screening';
 
 const DashboardStack = createStackNavigator();
 
@@ -18,6 +19,7 @@ const DashboardNavigation = () => {
       <DashboardStack.Screen name="Media" component={Media} />
       <DashboardStack.Screen name="Books" component={Books} />
       <DashboardStack.Screen name="Giving" component={Giving} />
+      <DashboardStack.Screen name="LiveStream" component={LiveStream} />
     </DashboardStack.Navigator>
   );
 };
