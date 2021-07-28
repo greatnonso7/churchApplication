@@ -18,6 +18,7 @@ const Contact = props => {
       <HeaderBar
         headerTitle={'Contact Us'}
         hasBackButton
+        tintColor={'#000'}
         onPressLeftIcon={() => goBack()}
       />
       <View style={styles.body}>

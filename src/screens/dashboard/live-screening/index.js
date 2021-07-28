@@ -47,6 +47,7 @@ const LiveStream = props => {
       <HeaderBar
         headerTitle={'Our Live Streams'}
         hasBackButton
+        tintColor={'#000'}
         onPressLeftIcon={() => props.navigation.goBack()}
       />
       <FlatList

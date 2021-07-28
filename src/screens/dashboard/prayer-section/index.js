@@ -19,6 +19,7 @@ class Prayer extends React.Component {
         <HeaderBar
           hasBackButton
           headerTitle="Prayers"
+          tintColor="#000"
           onPressLeftIcon={() => goBack()}
         />
 
