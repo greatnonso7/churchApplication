@@ -1,9 +1,14 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 
 import HeaderBar from '../../../shared/header-bar';
-import {hp} from '../../../shared/responsive-dimension';
+import {
+  deviceHeight,
+  deviceWidth,
+  hp,
+} from '../../../shared/responsive-dimension';
 import {styles} from './style';
 
 const Contact = props => {
@@ -25,13 +30,30 @@ const Contact = props => {
           </View>
           <View style={styles.singleInfoItem}>
             <Ionicons name="md-phone-portrait-outline" size={hp(30)} />
-            <Text style={styles.emailText}>+44 384-384-3847</Text>
+            <Text style={styles.emailText}>01332340930, </Text>
+            <Text style={styles.emailText}>07766054917</Text>
           </View>
         </View>
+      </View>
+      <View style={styles.locationContainer}>
+        <Text style={styles.contactTextHeading}>Location</Text>
 
-        <View style={styles.locationContainer}>
-          <Text style={styles.contactTextHeading}>Location</Text>
-        </View>
+        <MapView
+          provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+          style={{height: deviceHeight * 0.57, width: deviceWidth}}
+          region={{
+            latitude: 52.91633,
+            longitude: -1.48446,
+            latitudeDelta: 0.009,
+            longitudeDelta: 0.009,
+          }}>
+          <Marker
+            coordinate={{
+              latitude: 52.91633,
+              longitude: -1.48446,
+            }}
+          />
+        </MapView>
       </View>
     </View>
   );

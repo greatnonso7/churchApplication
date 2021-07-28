@@ -37,7 +37,6 @@ export const styles = StyleSheet.create({
   },
   locationContainer: {
     marginTop: hp(30),
-    marginHorizontal: hp(20),
   },
   infoContainer: {
     marginTop: hp(30),
@@ -64,7 +63,8 @@ export const styles = StyleSheet.create({
   },
   contactTextHeading: {
     ...main.boldText20,
-    marginLeft: hp(10),
+    marginLeft: hp(30),
+    marginBottom: hp(10),
   },
   logo: {
     height: hp(80),
